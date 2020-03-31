@@ -1,0 +1,15 @@
+<div class="filters container">
+  <a [routerLink]="['/projects','design']"><button class="filter cursor-pointer-neg">Design</button></a>
+  <a [routerLink]="['/projects','photography']"><button class="filter cursor-pointer-neg">Photography</button></a>
+  <a [routerLink]="['/projects','code']"><button class="filter cursor-pointer-neg">Code</button></a>
+  <a [routerLink]="['/projects','social-media']"><button class="filter cursor-pointer-neg">Social Media</button></a>
+  <a [routerLink]="['/projects','comunication']"><button class="filter cursor-pointer-neg">Comunication</button></a>
+  <a [routerLink]="['/projects','online-marketing']"><button class="filter cursor-pointer-neg">Online Marketing</button></a>
+  <a [routerLink]="['/projects','video']"><button class="filter cursor-pointer-neg">Video</button></a>
+  <a [routerLink]="['/projects','management']"><button class="filter cursor-pointer-neg">Management</button></a>
+</div>
+<div class="my-dev-projects">
+  <ul>
+      <app-display-projects class="display-projects d-flex flex-row flex-wrap justify-content-center" [projects]="projects"></app-display-projects>
+  </ul>
+</div>

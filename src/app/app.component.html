@@ -1,0 +1,70 @@
+<header>
+  <div class="header-container-desktop container justify-content-between d-none d-xs-none d-sm-block d-md-block d-lg-block d-xl-block d-sm-flex d-md-flex d-lg-flex d-xl-flex">
+      <div>
+          <a [routerLink]="['/home']"><img src="../assets/img/white-logo.svg"></a>
+      </div>
+      <nav>
+          <ul class="d-flex flex-row">
+              <li><a [routerLink]="['/blog']">blog</a></li>
+              <li><a [routerLink]="['/portfolio']">portfolio</a></li>
+              <li class="reach-me"><a [routerLink]="['/about-me']">about me</a></li>
+          </ul>
+      </nav>
+  </div>
+  <div class="header-container-mobile flex-column container justify-content-between align-items-center d-flex d-xs-flex d-sm-none d-md-none d-lg-none d-xl-none">
+      <div class="d-flex justify-content-between container">
+          <div>
+              <!-- <a [routerLink]="['/home']"><img src="../assets/img/mini-logo.svg"></a> -->
+              <a [routerLink]="['/home']"><img src="../assets/img/white-logo.svg"></a>
+          </div>
+          <nav>
+              <a class="burger-menu-trigger" id="click-event-toggle-mobile-menu">
+                  <div class="hide-on-expanded"></div>
+                  <div></div>
+                  <div class="hide-on-expanded"></div>
+              </a>
+          </nav>
+      </div>
+  </div>
+</header>
+<div class="mobile-menu container d-none d-xs-none d-sm-none d-md-none d-lg-none d-xl-none">
+  <ul class="d-flex justify-content-between">
+      <li>
+          <a class="portfolio-burger" [routerLink]="['/blog']"><span style="text-transform: uppercase;">blog</span></a>
+      </li>
+      <li>
+          <a class="portfolio-burger" [routerLink]="['/portfolio']"><span style="text-transform: uppercase;">portfolio</span></a>
+      </li>
+      <li>
+          <a class="about-me-burger" [routerLink]="['/about-me']"><span style="text-transform: uppercase;">about me</span></a>
+      </li>
+      <!-- <li>
+          <a class="reach-me-burger" [routerLink]="['/reach-me']"><span>Reach me @</span></a>
+      </li> -->
+  </ul>
+</div>
+<div class="router-outlet">
+  <router-outlet></router-outlet>
+</div>
+<footer>
+  <div class="d-flex justify-content-between container flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row">
+      <p class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Made with 💛 by Cristina Moreno</p>
+      <div>
+          <ul class="d-flex justify-content-center">
+              <li><a href="https://github.com/crismoreno" target="_blank">Github</a></li>
+              <li>·</li>
+              <li><a href="https://www.linkedin.com/in/morenomedran/" target="_blank">LinkedIn</a></li>
+              <li>·</li>
+              <li><a href="https://medium.com/@cristinamorenomedran" target="_blank">Medium</a></li>
+              <li>·</li>
+              <!-- <li><a [routerLink]="['/reach-me']">Reach me@</a></li> -->
+              <!-- <li>·</li> -->
+              <!-- <li><img src="../assets/img/mini-logo.svg"></li> -->
+          </ul>
+      </div>
+  </div>
+</footer>
+<div class="container flex-xl-row flex-lg-column flex-md-column flex-sm-column flex-column justify-content-between" id="cookie_consent">
+  <div><p>🍪 By using this site, you acknowledge that you have read and understood the <a [routerLink]="['/cookies']">cookie policy</a>.🍪</p></div>
+  <div class="d-flex justify-content-center"><button id="close-cookie-button">Close this</button></div>
+</div>

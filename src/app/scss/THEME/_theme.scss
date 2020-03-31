@@ -1,0 +1,121 @@
+header{
+    background-color: $red;
+    .header-container-desktop{
+        @include padding (10px, 15px, 10px, 15px);
+        img{
+            width: 150px;
+        }
+        ul{
+            li{
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                @include margin (0, 5px, 0, 5px);
+                text-transform: uppercase;
+                color: white;
+            }
+            li.reach-me{
+                background-color: #A50027;
+                border-radius: 4px;
+                @include padding (0, 10px, 0, 10px);
+            }
+        }
+    }
+    .header-container-mobile{
+        @include padding (10px, 15px, 10px, 15px);
+        img{
+            height: 30px;
+        }
+        nav{
+            height: fit-content;
+            a div{
+                width: 26px;
+                height: 1px;
+                background-color: white;
+                margin: 6px 0;
+            }
+        }
+    }
+}
+
+.mobile-menu{
+    @include margin (10px, 0, 0, 0);
+    background-color: transparent;
+    position: absolute;
+    z-index: 9999;
+    a{
+        color: white;
+        background-color: $red;
+        border-radius: 84px;
+        @include padding (4px, 15px, 5px, 15px);
+        font-size: 16px;
+    }
+    li:last-child a{
+        background-color: $dark-red;
+    }
+}
+
+
+
+footer{
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    background: $red;
+    display: table !important;
+    bottom: 0;
+    width: 100%;
+    // z-index: 3;
+    // position: fixed;
+    >div{
+        @include padding (10px, 0, 10px, 0);
+        @include font-style (16px, white, false, false, false, false);
+    }
+    p{
+        @include margin (0, 0, 0, 0);
+    }
+    li{
+        @include padding (0, 5px, 0, 5px);
+    }
+}
+#cookie_consent{
+    display: none;
+    position:fixed;
+    bottom: 30px;
+    background-color: $red;
+    left: 0;
+    right: 0;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    @include padding (10px, 15px, 10px, 15px);
+    p{
+        text-align: center;
+        margin: 0;
+        color: white;
+    }
+    button{
+        background-color: $dark-red;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        @include padding (5px, 10px, 5px, 10px);
+        @include margin (0, 5px, 0, 5px);
+    }
+    a{
+        text-decoration: underline;
+    }
+}
+
+
+//FIXING THE FLYING FOOTER -> As suggested by Atrapalo People :)
+.app-root{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.router-outlet{
+    flex-grow: 1;
+    margin-bottom: 50px;
+}
+
+
+/*# sourceURL=base/THEME/_theme.scss */

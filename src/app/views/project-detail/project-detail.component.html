@@ -1,0 +1,72 @@
+
+<div class="project-itself container">
+  <div class="filters">
+      <a [routerLink]="['/portfolio']"><button class="filter cursor-pointer">All projects</button></a>
+  </div>
+
+  <div class="project d-flex flex-xl-row flex-lg-row flex-md-column flex-sm-column flex-column">
+      <div class="project-info-container">
+          <ul class="project-features">
+              <li class="li d-flex"><p class="feature">PROJECT:</p><pre class="output"> {{project.name}}</pre></li>
+              <li class="li d-flex bordered"><p class="feature">CUSTOMER:</p><pre class="output"> {{project.customer}}</pre></li>
+              <li class="li d-flex bordered"><p class="feature">COMPLETION DATE:</p><pre class="output"> {{project.date}}</pre></li>
+
+              <!-- <div *ngIf="project.codinglang then codinglang"></div>
+              <ng-template #codinglang>
+                      <li class="li d-flex bordered"><p class="feature">LANGUAGES:</p><pre class="output"> {{project.codinglang}}</pre></li>
+              </ng-template> -->
+
+              <div *ngIf="project.collaborators then collaboratorsTemplate"></div>
+              <ng-template #collaboratorsTemplate><li class="li d-flex bordered"><p class="feature">COLLABORATORS:</p><pre class="output"> {{project.collaborators}}</pre></li></ng-template>
+              <div *ngIf="project.madeat then madeat"></div>
+              <ng-template #madeat>
+                  <li class="li d-flex bordered"><p class="feature">DEVELOPED AT:</p><pre class="output"> {{project.madeat}}</pre></li>
+              </ng-template>
+                  <!-- <li class="li"><p class="feature">TAGS:  </p> <p class="output"> {{project.tags}}</p></li> -->
+
+              <div *ngIf="project.website then websiteTemplate"></div>
+              <ng-template #websiteTemplate>
+                  <li class="li"><a class="website full-view-button" target="_blank" href={{project.website}} >FULL VIEW</a></li>
+              </ng-template>
+
+              <li class="description"><pre>{{project.description}}</pre></li>
+
+              <div *ngIf="project.download then downloadprojectTemplate"></div>
+              <ng-template #downloadprojectTemplate>
+                  <li><button class="download-project"><a class="download-project-link" href={{project.download}} target="_blank">Download Project</a></button></li>
+              </ng-template>
+
+
+              <div *ngIf="project.confidential then confidentialTemplate"></div>
+              <ng-template #confidentialTemplate>
+                  <li><button class="confidentiality-button"><a class="confidentiality-link" [routerLink]="['/reach-me']">Get in touch for further information about this project</a></button></li>
+              </ng-template>
+          </ul>
+      </div>
+
+      <div class="project-img-container">
+          <div *ngIf="project.img && !project.link then picTemplate"></div>
+          <ng-template #picTemplate>
+              <img class="project-imgs" src={{project.img}}>
+          </ng-template>
+          <div *ngIf="project.link && project.img then picandiframeTemplate"></div>
+          <ng-template #picandiframeTemplate>
+              <div class="video-img">
+                  <iframe class="videoandimg" allowFullScreen frameborder="0" width="630" height="380" scrolling="yes" align="bottom" mozallowfullscreen [src]="getSanitizeURL(project.link)" webkitAllowFullScreen></iframe>
+                  <img class="project-imgs-iframe" src={{project.img}}>
+              </div>
+          </ng-template>
+          <div *ngIf="project.link && !project.img then iframeTemplate"></div>
+          <ng-template #iframeTemplate>
+              <div class="video">
+                  <iframe allowFullScreen frameborder="0" width="630" height="380" scrolling="yes" align="bottom" mozallowfullscreen [src]="getSanitizeURL(project.link)" webkitAllowFullScreen></iframe>
+              </div>
+          </ng-template>
+      </div>
+  </div>
+</div>
+
+<div class="medium-fetched">
+        <h2 class="medium-fetched-title text-center">Check out my Blog!</h2>
+        <app-display-posts class="display-posts d-flex flex-row flex-wrap justify-content-center mb-5"></app-display-posts>
+      </div>

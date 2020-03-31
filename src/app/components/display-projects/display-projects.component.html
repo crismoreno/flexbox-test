@@ -1,0 +1,13 @@
+
+<li class="card" *ngFor = "let project of projects">
+  <a [routerLink]="['/project', project.id]"><div class="card-content d-flex flex-column">
+      <div class="img-container">
+        <img class="project-image" src={{project.cover}}>
+      </div>
+      <div class="project-details d-flex flex-column justify-content-center">
+          <p class="name">{{project.name}}</p>
+          <!-- <p class="type">{{project.metatags}}</p> -->
+          <p class="customer">{{project.customer}}</p>
+      </div>
+  </div></a>
+</li>
