@@ -106,16 +106,16 @@ footer{
 
 
 //FIXING THE FLYING FOOTER -> As suggested by Atrapalo People :)
-.app-root{
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
+// .app-root{
+//     display: flex;
+//     min-height: 100vh;
+//     flex-direction: column;
+// }
 
-.router-outlet{
-    flex-grow: 1;
-    margin-bottom: 50px;
-}
+// .router-outlet{
+//     flex-grow: 1;
+//     margin-bottom: 50px;
+// }
 
 
 /*# sourceURL=base/THEME/_theme.scss */

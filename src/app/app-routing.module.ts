@@ -15,15 +15,15 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about-me', component: AboutMeComponent },
-  { path: 'portfolio', component: PortfolioComponent },
+//   { path: 'home', component: HomeComponent },
+//   { path: 'about-me', component: AboutMeComponent },
+  { path: 'home', component: PortfolioComponent },
   { path: 'projects/:tag', component: FilteredProjectsComponent },
   { path: 'projects/:codinglang', component: FilteredProjectsComponent },
-  { path: 'project/:id', component: ProjectDetailComponent },
+//   { path: 'project/:id', component: ProjectDetailComponent },
   // { path: 'reach-me', component: ReachMeComponent },
-  { path: 'cookies', component: CookiesComponent },
-  { path: 'blog', component: BlogComponent },
+//   { path: 'cookies', component: CookiesComponent },
+//   { path: 'blog', component: BlogComponent },
   {path: '404', component: NotFoundComponent},
   {path: '**', redirectTo: '/404'}
 ];
